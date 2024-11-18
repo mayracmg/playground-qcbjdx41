@@ -5,6 +5,10 @@
 2. Descargar la base de datos [AdventureWorks](https://learn.microsoft.com/es-es/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)
 3. Instalar algun programa para conectarse a la base de datos ([SQL Server Management Studio](https://learn.microsoft.com/es-es/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16), Azure Data Studio, DBeaver u otro)
 4. Importar la base de datos AdventureWorks en SQL Server.
+- Click derecho sobre "Databases"
+- Click en la opción "Restore Database"
+- Seleccionar la opción "Device" y seleccionar el archivo (AdventureWorks2022.bak) descargado.
+- La base de datos AdventureWorks debe aparecer en la lista de bases de datos.
 
 
 ## Que es T-SQL (Transact SQL)
