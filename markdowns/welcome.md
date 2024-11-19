@@ -74,7 +74,11 @@ AS
 GO
 
 EXECUTE <ProcedureName> N'<Parameter 1 value>, N'<Parameter x value>;  
+GO
+```
 
+Ejemplo:
+```sql
 CREATE PROCEDURE SalesLT.uspGetCustomerCompany1
     @LastName nvarchar(50),
     @FirstName nvarchar(50)
