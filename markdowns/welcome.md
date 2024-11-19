@@ -62,7 +62,7 @@ WHILE @empid <=5
 ```
 :::
 
-::: Sintaxis creación de Stored Procedures
+## Sintaxis creación de Stored Procedures
 ```sql
 CREATE PROCEDURE <ProcedureName>
    @<ParameterName1> <data type>,
@@ -79,15 +79,15 @@ GO
 
 Ejemplo:
 ```sql
-CREATE PROCEDURE SalesLT.uspGetCustomerCompany1
+CREATE PROCEDURE Person.GetPerson
     @LastName nvarchar(50),
     @FirstName nvarchar(50)
 AS   
 
     SET NOCOUNT ON;
-    SELECT FirstName, LastName, CompanyName
-    FROM SalesLT.Customer
+    SELECT FirstName, LastName, Title
+    FROM Person.Person
     WHERE FirstName = @FirstName AND LastName = @LastName;
 GO
 ```
-:::
+
