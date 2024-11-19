@@ -12,12 +12,53 @@
 
 
 ## Que es T-SQL (Transact SQL)
+Proporciona un lenguaje de programación sólido con características que permiten almacenar temporalmente valores en variables, aplicar la ejecución condicional de comandos, pasar parámetros a procedimientos almacenados y controlar el flujo de los programas.
+
 
 ## Que es un Procedimiento Almacenado
-Son grupos con nombre de instrucciones que se pueden usar y reutilizar siempre que se necesiten. Los procedimientos almacenados pueden devolver resultados, manipular datos y realizar acciones administrativas en el servidor. 
+Son grupos de instrucciones que se pueden usar y reutilizar siempre que se necesiten, pueden devolver resultados, manipular datos y realizar acciones administrativas en el servidor. 
 Pueden contener sentencias DDL y DML.
 Algunas ventajas de los Procedimientos almacenados:
 - Reutilización del código
 - Seguridad
 - Mejorar el rendimiento
 - Mantenimiento inferior
+
+::: Sintaxis en T-SQL:
+### Declarar Variables
+```sql
+DECLARE @var1 AS INT = 99;
+DECLARE @var2 AS NVARCHAR(255);
+SET @var2 = N'string';
+```
+
+### IF
+```sql
+IF OBJECT_ID('HR.Employees') IS NULL --this object does exist in the sample database
+BEGIN
+    PRINT 'The specified object does not exist';
+END;
+
+IF OBJECT_ID('HR.Employees') IS NULL --this object does exist in the sample database
+BEGIN
+    PRINT 'The specified object does not exist';
+END
+ELSE
+BEGIN
+    PRINT 'The specified object exists';
+END;
+```
+
+### Ciclos
+```sql
+DECLARE @empid AS INT = 1, @lname AS NVARCHAR(20);
+WHILE @empid <=5
+   BEGIN
+	SELECT @lname = lastname FROM HR.Employees
+		WHERE empid = @empid;
+	PRINT @lname;
+	SET @empid += 1;
+   END;
+```
+
+:::
