@@ -24,7 +24,7 @@ Algunas ventajas de los Procedimientos almacenados:
 - Mejorar el rendimiento
 - Mantenimiento inferior
 
-::: Sintaxis en T-SQL:
+::: ## Sintaxis en T-SQL:
 ### Declarar Variables
 ```sql
 DECLARE @var1 AS INT = 99;
@@ -60,5 +60,17 @@ WHILE @empid <=5
 	SET @empid += 1;
    END;
 ```
+:::
 
+::: Sintaxis creación de Stored Procedures
+```sql
+CREATE PROCEDURE <ProcedureName>
+   @<ParameterName1> <data type>,
+   @<ParameterName2> <data type>
+AS   
+
+   SET NOCOUNT ON;
+   SELECT <your SELECT statement>;
+GO
+```
 :::
