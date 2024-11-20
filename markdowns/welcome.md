@@ -91,3 +91,16 @@ AS
 GO
 ```
 
+```sql
+CREATE OR ALTER PROCEDURE Sales.GetCustomerCountry
+AS   
+	SET NOCOUNT ON;
+
+	SELECT *
+	FROM Sales.vIndividualCustomer IC
+	INNER JOIN Person.vStateProvinceCountryRegion CR ON IC.CountryRegionName = CR.CountryRegionName
+
+GO
+```
+
+
