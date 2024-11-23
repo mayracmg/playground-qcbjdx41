@@ -34,18 +34,18 @@ SET @var2 = N'string';
 
 ### IF
 ```sql
-IF OBJECT_ID('HR.Employees') IS NULL --this object does exist in the sample database
+IF @var2 = 'string'  --this object does exist in the sample database
 BEGIN
-    PRINT 'The specified object does not exist';
+    PRINT 'Hi :)';
 END;
 
-IF OBJECT_ID('HR.Employees') IS NULL --this object does exist in the sample database
+IF string = 'string' --this object does exist in the sample database
 BEGIN
-    PRINT 'The specified object does not exist';
+    PRINT 'Hi :)';
 END
 ELSE
 BEGIN
-    PRINT 'The specified object exists';
+    PRINT 'Ah :(';
 END;
 ```
 
