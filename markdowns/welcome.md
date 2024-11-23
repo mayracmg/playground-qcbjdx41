@@ -105,4 +105,14 @@ GO
 EXEC Sales.GetCustomerCountry
 ```
 
+```sql
+CREATE TABLE PersonReport (
+	PersonReportID INT IDENTITY,
+	BusinessEntityID BIGINT, 
+	PersonType NVARCHAR(2), 
+	FirstName NVARCHAR(100), 
+	LastName NVARCHAR(100),
+	CreatedDate DATETIME, 
+	TransactionsCount BIGINT);
+```
 
