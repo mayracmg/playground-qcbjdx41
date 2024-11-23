@@ -102,25 +102,6 @@ AS
 
 GO
 
-ALTER PROCEDURE Sales.GetCustomerCountry
-AS   
-	SET NOCOUNT ON;
-
-	SELECT BusinessEntityID, Title, FirstName, LastName, Suffix, PhoneNumber, PhoneNumberType, EmailAddress, EmailPromotion, AddressType, AddressLine1,
-		AddressLine2, City, StateProvinceName, PostalCode, CountryRegionName
-	INTO #vIndividualCustomer
-	FROM Sales.vIndividualCustomer 
-
-	SELECT *
-	INTO #vStateProvinceCountryRegion
-	FROM Person.vStateProvinceCountryRegion
-
-	SELECT *
-	FROM #vIndividualCustomer IC
-	INNER JOIN #vStateProvinceCountryRegion CR ON IC.CountryRegionName = CR.CountryRegionName;
-
-GO
-
 EXEC Sales.GetCustomerCountry
 ```
 
